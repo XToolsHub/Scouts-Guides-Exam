@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scouts Guides Exam Prep - Free Practice Tests & Quizzes</title>
+    <meta name="description" content="Free Scouts and Guides exam preparation platform with interactive quizzes, progress tracking, and downloadable certificates. No login required.">
+    <meta name="keywords" content="scouts guides exam, practice tests, scouting quizzes, badge tests, camping skills, first aid, knots, compass reading">
+    <meta name="author" content="Scouts Guides Exam Prep">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Scouts Guides Exam Preparation - Free Practice Tests">
+    <meta property="og:description" content="Free Scouts and Guides exam preparation platform with interactive quizzes and progress tracking.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://scoutsguidesexamprep.com">
+    <meta property="og:image" content="https://scoutsguidesexamprep.com/images/og-image.jpg">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Scouts Guides Exam Preparation",
+      "description": "Free practice tests and quizzes for Scouts and Guides exam preparation",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Scouts Guides Exam Prep"
+      }
+    }
+    </script>
+    
+    <!-- Google AdSense Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+            crossorigin="anonymous"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #2E7D32;
+            --primary-dark: #1B5E20;
+            --primary-light: #4CAF50;
+            --secondary: #FF9800;
+            --accent: #FFC107;
+            --light: #f8f9fa;
+            --dark: #2E2E2E;
+            --gray: #6c757d;
+            --card-bg: rgba(255, 255, 255, 0.95);
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2f1a 0%, #2E7D32 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            z-index: -1;
+        }
+        
+        .scouting-icons {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        .scouting-icon {
+            position: absolute;
+            font-size: 2rem;
+            color: var(--accent);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M50,5 L60,40 L95,40 L65,60 L75,95 L50,75 L25,95 L35,60 L5,40 L40,40 Z" fill="white"/></svg>');
+            background-size: 50px;
+            opacity: 0.1;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            font-size: 3rem;
+            margin-right: 15px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .logo-text h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .logo-text p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+        
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Timer Section */
+        .timer-section {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .timer-title {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .timer-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .timer-unit {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            min-width: 100px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timer-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timer-label {
+            color: var(--gray);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .timer-message {
+            color: white;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            opacity: 0.9;
+        }
+        
+        .timer-highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            color: white;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        
+        /* Ad Banner Styles */
+        .ad-banner {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .ad-banner.horizontal {
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .ad-banner.vertical {
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .ad-banner p {
+            color: var(--gray);
+            font-style: italic;
+        }
+        
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section p {
+            color: white;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        
+        /* Subject Cards with Updated Colors */
+        .subject-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .subject-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .subject-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .subject-card p {
+            line-height: 1.6;
+        }
+        
+        /* Updated Text Colors for Subject Cards */
+        .scouting-fundamentals {
+            border-top: 4px solid #2E7D32;
+        }
+        
+        .scouting-fundamentals h3 {
+            color: #2E7D32;
+        }
+        
+        .scouting-fundamentals p {
+            color: #1B5E20;
+        }
+        
+        .outdoor-skills {
+            border-top: 4px solid #FF9800;
+        }
+        
+        .outdoor-skills h3 {
+            color: #FF9800;
+        }
+        
+        .outdoor-skills p {
+            color: #E65100;
+        }
+        
+        .first-aid-safety {
+            border-top: 4px solid #F44336;
+        }
+        
+        .first-aid-safety h3 {
+            color: #F44336;
+        }
+        
+        .first-aid-safety p {
+            color: #C62828;
+        }
+        
+        /* Button Styles */
+        button {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        button:hover::before {
+            left: 100%;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--secondary) 0%, #e68900 100%);
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+        }
+        
+        .btn-large {
+            padding: 18px 40px;
+            font-size: 1.2rem;
+        }
+        
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .stat-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+            color: white;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #1a2f1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.05"><path d="M50,5 L60,40 L95,40 L65,60 L75,95 L50,75 L25,95 L35,60 L5,40 L40,40 Z" fill="white"/></svg>');
+            background-size: 40px;
+        }
+        
+        footer .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .footer-links a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            opacity: 0.8;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+            
+            .header-actions {
+                justify-content: center;
+            }
+            
+            .nav-container {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .features, .subject-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .timer-container {
+                gap: 1rem;
+            }
+            
+            .timer-unit {
+                min-width: 80px;
+                padding: 1rem;
+            }
+            
+            .timer-value {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Scouting Icons Background -->
+    <div class="scouting-icons" id="scouting-icons"></div>
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">🏕️</div>
+                    <div class="logo-text">
+                        <h1>Scouts Guides Exam Preparation</h1>
+                        <p>Your Path to Scouting Excellence</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button onclick="location.href='quiz.html'" class="btn-secondary">Take Practice Test</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#subjects" class="nav-link">Subjects</a>
+                <a href="#stats" class="nav-link">Statistics</a>
+                <a href="quiz.html" class="nav-link">Practice Tests</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <!-- Top Horizontal Banner Ad -->
+        <div class="ad-banner horizontal">
+            <!-- AdSense Ad Unit 1 - Replace with your Ad Unit ID -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <!-- Timer Section -->
+        <section class="timer-section">
+            <h2 class="timer-title">⏰ Daily Question Refresh</h2>
+            <p class="timer-message">Our practice questions are updated every <span class="timer-highlight">24 hours</span> to keep your learning fresh and challenging!</p>
+            <div class="timer-container">
+                <div class="timer-unit">
+                    <div class="timer-value" id="hours">24</div>
+                    <div class="timer-label">Hours</div>
+                </div>
+                <div class="timer-unit">
+                    <div class="timer-value" id="minutes">00</div>
+                    <div class="timer-label">Minutes</div>
+                </div>
+                <div class="timer-unit">
+                    <div class="timer-value" id="seconds">00</div>
+                    <div class="timer-label">Seconds</div>
+                </div>
+            </div>
+            <p class="timer-message">Next question refresh in: <span id="next-refresh-time"></span></p>
+        </section>
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Master Your Scouts & Guides Exams</h1>
+            <p>Free interactive practice tests, progress tracking, and downloadable certificates. No registration required - start learning today!</p>
+            <button onclick="location.href='quiz.html'" class="btn-large">Start Your First Practice Test</button>
+        </section>
+        
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Comprehensive Content</h3>
+                <p>Covering all essential scouting topics from basic principles to advanced outdoor skills and first aid.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏅</div>
+                <h3>Badge System</h3>
+                <p>Earn digital badges based on your performance - Bronze, Silver, and Gold for outstanding achievements.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Progress Tracking</h3>
+                <p>Monitor your improvement with detailed statistics and performance analytics over time.</p>
+            </div>
+        </section>
+        
+        <!-- Middle Horizontal Banner Ad -->
+        <div class="ad-banner horizontal">
+            <!-- AdSense Ad Unit 2 - Replace with your Ad Unit ID -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <!-- Subjects Section -->
+        <section id="subjects" class="cta-section">
+            <h2>Comprehensive Exam Coverage</h2>
+            <p>Our practice tests cover all essential scouting subjects to ensure you're fully prepared for any exam.</p>
+            <div class="subject-cards">
+                <div class="subject-card scouting-fundamentals">
+                    <h3>Scouting Fundamentals</h3>
+                    <p>History, principles, promise, law, and the fundamentals of the scouting movement. Learn about the origins of scouting and its core values that guide scouts worldwide.</p>
+                </div>
+                <div class="subject-card outdoor-skills">
+                    <h3>Outdoor Skills</h3>
+                    <p>Camping, hiking, navigation, pioneering, and wilderness survival techniques. Master essential outdoor competencies for safe and enjoyable scouting adventures.</p>
+                </div>
+                <div class="subject-card first-aid-safety">
+                    <h3>First Aid & Safety</h3>
+                    <p>Essential first aid procedures, emergency response, and safety protocols. Be prepared to handle common injuries and emergencies during scouting activities.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section id="stats" class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="users-count">5,000+</div>
+                <div class="stat-label">Active Users</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="tests-count">10,000+</div>
+                <div class="stat-label">Tests Completed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="badges-count">15,000+</div>
+                <div class="stat-label">Badges Earned</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="success-rate">94%</div>
+                <div class="stat-label">Success Rate</div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Ready to Test Your Scouting Knowledge?</h2>
+            <p>Join thousands of scouts and guides who have improved their exam performance with our practice tests.</p>
+            <button onclick="location.href='quiz.html'" class="btn-large btn-secondary">Start Practicing Now</button>
+        </section>
+        
+        <!-- Bottom Horizontal Banner Ad -->
+        <div class="ad-banner horizontal">
+            <!-- AdSense Ad Unit 3 - Replace with your Ad Unit ID -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="logo" style="justify-content: center; margin-bottom: 2rem;">
+                <div class="logo-icon">🏕️</div>
+                <div class="logo-text">
+                    <h1>Scouts Guides Exam Preparation</h1>
+                    <p>Empowering Scouts & Guides Worldwide</p>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/faq">FAQ</a>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Scouts Guides Exam Preparation. All rights reserved.</p>
+                <p>This site is not officially associated with WOSM or WAGGGS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create scouting icons background
+        function createScoutingIcons() {
+            const container = document.getElementById('scouting-icons');
+            const icons = ['🏕️', '🏹', '🗺️', '🧭', '⛺', '🔥', '🌲', '🌍', '🪵', '🛶'];
+            
+            for (let i = 0; i < 30; i++) {
+                const icon = document.createElement('div');
+                icon.className = 'scouting-icon';
+                icon.textContent = icons[Math.floor(Math.random() * icons.length)];
+                icon.style.left = `${Math.random() * 100}%`;
+                icon.style.top = `${Math.random() * 100}%`;
+                icon.style.fontSize = `${Math.random() * 2 + 1}rem`;
+                icon.style.animationDelay = `${Math.random() * 5}s`;
+                container.appendChild(icon);
+            }
+        }
+        
+        // 24-Hour Timer Functionality
+        function startTimer() {
+            // Get the next refresh time (24 hours from now)
+            const now = new Date();
+            const nextRefresh = new Date(now);
+            nextRefresh.setHours(now.getHours() + 24);
+            
+            // Update the next refresh time display
+            document.getElementById('next-refresh-time').textContent = nextRefresh.toLocaleString();
+            
+            // Update timer every second
+            const timerInterval = setInterval(() => {
+                const now = new Date();
+                const timeRemaining = nextRefresh - now;
+                
+                if (timeRemaining <= 0) {
+                    // Timer has ended - reset for next 24 hours
+                    clearInterval(timerInterval);
+                    startTimer();
+                    return;
+                }
+                
+                // Calculate hours, minutes, seconds
+                const hours = Math.floor(timeRemaining / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+                
+                // Update display
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }, 1000);
+        }
+        
+        // Animate stats counters
+        function animateStats() {
+            const stats = [
+                { element: document.getElementById('users-count'), target: 7500, duration: 2000 },
+                { element: document.getElementById('tests-count'), target: 12500, duration: 2000 },
+                { element: document.getElementById('badges-count'), target: 18500, duration: 2000 },
+                { element: document.getElementById('success-rate'), target: 94, duration: 2000, isPercent: true }
+            ];
+            
+            stats.forEach(stat => {
+                let start = 0;
+                const increment = stat.target / (stat.duration / 16); // 60fps
+                const timer = setInterval(() => {
+                    start += increment;
+                    if (start >= stat.target) {
+                        clearInterval(timer);
+                        stat.element.textContent = stat.isPercent ? 
+                            `${stat.target}%` : 
+                            `${Math.round(stat.target).toLocaleString()}+`;
+                    } else {
+                        stat.element.textContent = stat.isPercent ? 
+                            `${Math.round(start)}%` : 
+                            `${Math.round(start).toLocaleString()}+`;
+                    }
+                }, 16);
+            });
+        }
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            createScoutingIcons();
+            startTimer();
+            
+            // Animate stats when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStats();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(document.getElementById('stats'));
+        });
+    </script>
+</body>
+</html>
